@@ -54,7 +54,7 @@ function screenshot(chart = nonrt_chart1, filename = 'screenshot') {
 
 function showPressure(model) {
     pregnant.setDataloggerInterval(0.0005)
-    pregnant.setModelsToWatch([model])
+    pregnant.setDataloggerWatchedModels([model])
     callback = () => {
         plotTimeChart(1, pregnant, [model],['pres'],[1],["pressure in mmmhg"]);
     }
@@ -63,7 +63,7 @@ function showPressure(model) {
 
 function showFlow(model) {
     pregnant.setDataloggerInterval(0.0005)
-    pregnant.setModelsToWatch([model])
+    pregnant.setDataloggerWatchedModels([model])
     callback = () => {
         plotTimeChart(1, pregnant, [model],['real_flow'],[60],["flow L/min"]);
     }
